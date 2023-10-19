@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Bold Roboto";
+    src: url("Roboto/Roboto-Bold.ttf");
+}
+
+
+.main{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    grid-template-rows: repeat(6, 70px);
+    gap: 5px;
+
+}
+.cell{
+    border: 2px solid #dee1e9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bold Roboto";
+    font-size: 32px;
+}
+
+.keyboard > .checked-misplaced, .container > .checked-misplaced {
+    background-color: #f3c237;
+    color: white;
+    border-color:#f3c237  ;
+    animation: popUp 850ms ease-out;
+
+}
+.keyboard > .checked-placed, .container > .checked-placed {
+    background-color: #79b851 ;
+    color: white;
+    border-color:#79b851  ;
+    animation: popUp 850ms ease-out;
+
+}
+.keyboard > .checked-false, .container > .checked-false {
+    background-color: #a4aec4  ;
+    color: white;
+    border-color: #a4aec4  ;
+    animation: popUp 850ms ease-out;
+
+}
+
+.unchecked{
+    color: black;
+    border-color: #a7adc0;
+    animation: popTurnBackward 450ms ease-out;
+}
+.uncheckedDelete{
+    animation: popTurn 450ms ease-out;
+}
+
+.pressed {
+    animation: pop 200ms;
+}
+
+@keyframes popTurn {
+    0% { 
+        color: black;
+        transform: scale(1) rotateY(0);
+    }
+    50% {
+        color: black;
+    }
+    100% { 
+        color: white;
+        transform: scale(1) rotateY(0.5turn);
+    }
+    
+}
+
+@keyframes popTurnBackward {
+    0% { 
+        color: white;
+        transform: scale(1) rotateY(.5turn);
+    }
+    50% {
+        color: white;
+    }
+    100% { 
+        color: black;
+        transform: scale(1) rotateY(0);
+    }
+    
+}
+
+@keyframes popUp {
+    0% { 
+        color: transparent;
+        transform: scale(1) rotateX(.5turn);
+    }
+    10% {
+        color: transparent;
+    }
+    100% { 
+        color: white;
+        transform: scale(1) rotateX(0turn);
+    }
+}
+
+@keyframes pop {
+    0%, 100% {transform: scale(1);
+    }
+    50% {transform: scale(1.1);
+    }
+    
+}
+
+.button {
+    font-size: 1.5rem;
+    border-radius: 5px;
+}

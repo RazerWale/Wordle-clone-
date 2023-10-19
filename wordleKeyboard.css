@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto/Roboto-Regular.ttf");
+}
+
+.keyboard {
+    width: 41.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    font-size: 1.8rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    font-family: "Roboto";
+}
+
+.default {
+    background-color: #DCE1ED;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.default:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 5px grey;
+    cursor: pointer;
+}
+
+.secondRow {
+    width: 65px;
+}
+
+.secondRowAl {
+    width: 70px;
+}
+
+.thirdRowBspcAndEntr {
+    width: 95px;
+}
+
+.thirdRowBspcAndEntr svg {
+    width: 50%;
+}
+
